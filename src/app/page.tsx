@@ -29,8 +29,8 @@ export default function Home() {
                   </span>
                 </Button> */}
                 <h1 className="text-4xl mb-8 md:mb-12 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-orange-700 to-orange-400 font-sans font-bold">
-                  Autumn 8: <br/> Simplifying Messaging <br/> Automation!
-                   {/* Autumn 8: <br/> Automation <br/>will Never Fall  */}
+                  Autumn 8: <br /> Simplifying Messaging <br /> Automation!
+                  {/* Autumn 8: <br/> Automation <br/>will Never Fall  */}
                 </h1>
                 <Button className="p-[3px] h-full relative mb-0 md:mb-12 rounded-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-700 to-orange-400 rounded-full" />
@@ -41,11 +41,11 @@ export default function Home() {
               </div>
             }
           >
-            <Image 
-              src="/banner-image.jpg" 
-              alt="banner image" 
-              height={720} 
-              width={1400} 
+            <Image
+              src="/banner-image.jpg"
+              alt="banner image"
+              height={720}
+              width={1400}
               className="mx-auto rounded-2xl object-cover h-full object-left-top"
               draggable={false}
             />

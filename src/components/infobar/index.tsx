@@ -8,6 +8,7 @@ import {
 import { Input } from '../ui/input'
 import { Book, Headphones, Search } from 'lucide-react'
 import { SignedIn, UserButton } from '@clerk/nextjs'
+import { ModeToggle } from '../global/mode-toggle'
 
 type Props = {}
 
@@ -19,6 +20,7 @@ const InfoBar = (props: Props) => {
                 <Input placeholder='Quick Search' className='border-none focus-visible:ring-offset-0 focus-visible:!ring-0 bg-transparent' />
             </span>
             {/* HELP!! XD */}
+            <ModeToggle />
             <TooltipProvider>
                 <Tooltip delayDuration={0}>
                     <TooltipTrigger>

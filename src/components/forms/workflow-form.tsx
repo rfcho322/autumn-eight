@@ -17,6 +17,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from '../ui/button'
 import { Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
+import { onCreateWorkflow } from '@/app/(main)/(pages)/workflows/_actions/workflow-connections'
+import { useModal } from '@/providers/modal-provider'
 
 type Props = {
     title?: string
@@ -24,6 +27,7 @@ type Props = {
 }
 
 const WorkflowForm = ({ subTitle, title }: Props) => {
+    const { setClose } = useModal();
     const form = useForm<z.infer<typeof WorkflowFormSchema>>({
         mode: 'onChange',
         resolver: zodResolver(WorkflowFormSchema),
@@ -36,8 +40,13 @@ const WorkflowForm = ({ subTitle, title }: Props) => {
     const isLoading = form.formState.isLoading
     const router = useRouter()
 
-    const handleSubmit = () => {
-
+    const handleSubmit = async (values: z.infer<typeof WorkflowFormSchema>) => {
+        const workflow = await onCreateWorkflow(values.name, values.description)
+        if (workflow) {
+            toast.message(workflow.message)
+            router.refresh()
+        }
+        setClose()
     }
 
     return (

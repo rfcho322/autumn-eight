@@ -33,7 +33,7 @@ const CustomModal = ({ children, title, subheading, defaultOpen }: Props) => {
             <DrawerContent>
                 <DrawerHeader>
                     <DrawerTitle className="text-center">{title}</DrawerTitle>
-                    {/* CHANGE DrawerDescription TO div IF HYDRATIONG WARNING PERSISTS */}
+                    {/* BUG CHANGE DrawerDescription TO div IF HYDRATION WARNING PERSISTS */}
                     <DrawerDescription className="text-center flex flex-col items-center gap-4 h-96 overflow-scroll">
                         {subheading}
                         {children}
