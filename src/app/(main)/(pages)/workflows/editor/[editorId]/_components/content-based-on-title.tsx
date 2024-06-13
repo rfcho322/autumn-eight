@@ -5,10 +5,13 @@ import { onContentChange } from '@/lib/editor-utils'
 import { NodeMapper } from '@/lib/types'
 import { ConnectionProviderProps } from '@/providers/connections-provider'
 import { EditorState } from '@/providers/editor-provider'
-import React from 'react'
+import React, { useEffect } from 'react'
 import GoogleFileDetails from './google-file-details'
 import GoogleDriveFiles from './google-drive-file'
 import ActionButton from './action-button'
+import { getFileMetaData } from '@/app/(main)/(pages)/connections/_actions/google-connections'
+import { toast } from 'sonner'
+import axios from 'axios'
 
 export interface Option {
     value: string
@@ -41,6 +44,23 @@ const ContentBasedOnTitle = ({
 
     const { selectedNode } = newState.editor
     const title = selectedNode.data.title
+
+    useEffect(() => {
+        const reqGoogle = async () => {
+            const response: { data: { message: { files: any } } } = await axios.get(
+                '/api/drive'
+            )
+            if (response) {
+                console.log(response.data.message.files[0])
+                toast.message("File is fetched")
+                setFile(response.data.message.files[0])
+            } else {
+                toast.error('Something went wrong')
+            }
+        }
+        reqGoogle()
+    }, [])
+
     // @ts-ignore
     const nodeConnectionType: any = nodeConnection[NodeMapper[title]]
     if (!nodeConnectionType) return <p>Not connected</p>
@@ -71,6 +91,7 @@ const ContentBasedOnTitle = ({
                     </CardHeader>
                 )}
                 <div className='flex flex-col gap-3 px-6 py-3 pb-20'>
+                    {/* NEEDS CHANGE GO TO NOTEPAD */}
                     <p>{title === 'Notion' ? 'Values to be stored' : 'Message'}</p>
                     {title === 'Discord' || title === 'Slack' ? (
                         <Input

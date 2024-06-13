@@ -52,7 +52,7 @@ const GoogleDriveFiles = (props: Props) => {
                     })}
                 >
                     {loading ? (
-                        <div className="absolute flex h-full w-full items-center justify-center">
+                        <div className="flex items-center justify-center">
                             <CanvasLoader />
                         </div>
                     ) : (

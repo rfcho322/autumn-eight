@@ -1,6 +1,7 @@
 import React from 'react'
 import Workflow from './workflow'
 import { onGetWorkflows } from '../_actions/workflow-connections'
+import UserCredits from './user-credits'
 
 type Props = {}
 
@@ -9,6 +10,7 @@ const Workflows = async (props: Props) => {
     return (
         <div className='relative flex flex-col gap-4'>
             <section className='flex flex-col gap-4 px-4'>
+                <UserCredits />
                 {workflows?.length ? (
                     workflows.map((flow) => (
                         <Workflow

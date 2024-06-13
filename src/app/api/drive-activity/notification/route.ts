@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
               );
               flowPath.splice(flowPath[current], 1);
             }
-            // TODO: GET THE CRON JOB API KEY
+            // CRON JOBS
             if (flowPath[current] == "Wait") {
               const res = await axios.put(
                 "https://api.cron-job.org/jobs",

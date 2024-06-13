@@ -95,7 +95,7 @@ export const onCreateNewPageInDatabase = async (
                 {
                     text: {
                         // CHANGE: NEEDS CHANGE content(also use this in content:) should be string
-                        content: "Testing",
+                        content: content,
                     },
                 },
             ],

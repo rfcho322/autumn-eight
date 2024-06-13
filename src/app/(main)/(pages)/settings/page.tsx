@@ -61,7 +61,7 @@ const Settings = async (props: Props) => {
             <div className='flex flex-col gap-10 p-6'>
                 <div>
                     <h2 className='text-2xl font-bold'>User Profile</h2>
-                    <p className='text-base text-white/50'>
+                    <p className='text-base text-foreground/50 dark:text-white/50'>
                         Add or Update your information
                     </p>
                 </div>
