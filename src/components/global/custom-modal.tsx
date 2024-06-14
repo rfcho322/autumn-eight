@@ -30,26 +30,27 @@ const CustomModal = ({ children, title, subheading, defaultOpen }: Props) => {
             open={isOpen}
             onClose={handleClose}
         >
-            <DrawerContent>
-                <DrawerHeader>
-                    <DrawerTitle className="text-center">{title}</DrawerTitle>
-                    {/* BUG CHANGE DrawerDescription TO div IF HYDRATION WARNING PERSISTS */}
-                    <DrawerDescription className="text-center flex flex-col items-center gap-4 h-96 overflow-scroll">
-                        {subheading}
-                        {children}
-                    </DrawerDescription>
-                </DrawerHeader>
-                <DrawerFooter className="flex flex-col gap-4 bg-background border-t-[1px] border-t-muted">
-                    <DrawerClose asChild>
-                        <Button
-                            variant="ghost"
-                            className="w-full"
-                            onClick={handleClose}
-                        >
-                            Close
-                        </Button>
-                    </DrawerClose>
-                </DrawerFooter>
+            <DrawerContent className="space-y-4">
+                <div className="mx-auto w-full max-w-sm">
+                    <DrawerHeader>
+                        <DrawerTitle className="text-center">{title}</DrawerTitle>
+                        <div className="text-sm text-muted-foreground text-center flex flex-col items-center gap-4 h-96 overflow-scroll">
+                            {subheading}
+                            {children}
+                        </div>
+                    </DrawerHeader>
+                    <DrawerFooter className="flex flex-col gap-4 bg-background">
+                        <DrawerClose asChild>
+                            <Button
+                                variant="outline"
+                                className="w-full"
+                                onClick={handleClose}
+                            >
+                                Close
+                            </Button>
+                        </DrawerClose>
+                    </DrawerFooter>
+                </div>
             </DrawerContent>
         </Drawer>
     )

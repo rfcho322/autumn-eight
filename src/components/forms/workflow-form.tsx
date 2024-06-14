@@ -57,7 +57,7 @@ const WorkflowForm = ({ subTitle, title }: Props) => {
                     <CardDescription>{subTitle}</CardDescription>
                 </CardHeader>
             )}
-            <CardContent>
+            <CardContent className='pt-3'>
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(handleSubmit)}

@@ -34,7 +34,7 @@ export default function Home() {
                 </h1>
                 <Button className="p-[3px] h-full relative mb-0 md:mb-12 rounded-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-700 to-orange-400 rounded-full" />
-                  <div className="px-8 py-3 text-2xl bg-black rounded-full relative group transition duration-200 text-white hover:bg-transparent">
+                  <div className="px-8 py-3 text-2xl bg-black rounded-full relative group transition ease-in-out duration-500 text-white hover:bg-transparent">
                     Start For Free Today
                   </div>
                 </Button>
@@ -42,7 +42,7 @@ export default function Home() {
             }
           >
             <Image
-              src="/banner-image.jpg"
+              src="/banner-image.png"
               alt="banner image"
               height={720}
               width={1400}
