@@ -2,18 +2,18 @@ import React from 'react'
 import {
     Calendar,
     CircuitBoard,
-    Database,
     GitBranch,
     HardDrive,
     Mail,
     MousePointerClickIcon,
-    Plus,
-    Slack,
     Timer,
     Webhook,
     Zap,
 } from 'lucide-react'
 import { EditorCanvasTypes } from '@/lib/types'
+import SlackIcon from '@/components/icons/slack'
+import NotionIcon from '@/components/icons/notion'
+import DiscordIcon from '@/components/icons/discord'
 
 type Props = { type: EditorCanvasTypes }
 
@@ -42,9 +42,9 @@ const EditorCanvasIconHelper = ({ type }: Props) => {
             )
         case 'Slack':
             return (
-                <Slack
-                    className="flex-shrink-0"
-                    size={30}
+                <SlackIcon
+                    fillColor='fill-white'
+                    size='30'
                 />
             )
         case 'Google Drive':
@@ -56,9 +56,16 @@ const EditorCanvasIconHelper = ({ type }: Props) => {
             )
         case 'Notion':
             return (
-                <Database
-                    className="flex-shrink-0"
-                    size={30}
+                <NotionIcon
+                    fillColor='fill-white'
+                    size='30'
+                />
+            )
+        case 'Discord':
+            return (
+                <DiscordIcon
+                    fillColor='fill-white'
+                    size='30'
                 />
             )
         case 'Custom Webhook':

@@ -30,6 +30,7 @@ export type EditorCanvasTypes =
   | "Slack"
   | "Google Drive"
   | "Notion"
+  | "Discord"
   | "Custom Webhook"
   | "Google Calendar"
   | "Trigger"

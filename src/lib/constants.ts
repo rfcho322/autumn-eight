@@ -6,6 +6,10 @@ import Payment from "@/components/icons/payment";
 import Settings from "@/components/icons/settings";
 import Workflows from "@/components/icons/workflows";
 import { Connection } from "./types";
+import DiscordIcon from "@/components/icons/discord";
+import SlackIcon from "@/components/icons/slack";
+import NotionIcon from "@/components/icons/notion";
+import GoogleDriveIcon from "@/components/icons/google-drive";
 
 export const clientLogos = [...new Array(10)].map((clientLogo, index) => ({
   href: `/logo${index + 1}.svg`,
@@ -175,6 +179,29 @@ export const sidebarItems = [
   { name: "Billing", Component: Payment, href: "/billing" },
   { name: "Templates", Component: Templates, href: "/templates" },
   { name: "Logs", Component: Logs, href: "/logs" },
+];
+
+export const dashboardConnections = [
+  {
+    title: "Discord",
+    description: "Automate messaging on Discord",
+    icon: DiscordIcon,
+  },
+  {
+    title: "Slack",
+    description: "Automate team communication and notifications on Slack.",
+    icon: SlackIcon,
+  },
+  {
+    title: "Notion",
+    description: "Automate content management and collaboration on Notion.",
+    icon: NotionIcon,
+  },
+  {
+    title: "Google Drive",
+    description: "Automate file organization and sharing on Google Drive.",
+    icon: GoogleDriveIcon,
+  },
 ];
 
 export const CONNECTIONS: Connection[] = [
