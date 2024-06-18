@@ -13,6 +13,7 @@ import clsx from 'clsx'
 import { Separator } from '../ui/separator'
 import { Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import { ModeToggle } from '../global/mode-toggle'
+import Image from 'next/image'
 
 
 type Props = {}
@@ -26,7 +27,14 @@ const SidebarItems = (props: Props) => {
                     className='flex font-bold flex-row text-sm'
                     href="/"
                 >
-                    Autumn8
+                    <div className='relative w-6 h-6'>
+                        <Image
+                            src="/autumn-eight-logo.png"
+                            className='object-cover'
+                            fill
+                            alt="autumn eight logo"
+                        />
+                    </div>
                 </Link>
                 <TooltipProvider>
                     {sidebarItems.map((sidebarItem) => (

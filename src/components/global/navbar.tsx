@@ -1,6 +1,7 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { currentUser } from '@clerk/nextjs/server'
 import { MenuIcon } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,7 +13,17 @@ const Navbar = async (props: Props) => {
         <header className='fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-between'>
             {/* LEFT */}
             <aside className='flex items-center gap-[2px]'>
-                <p className='text-3xl font-bold'>Autumn 8</p>
+                <div className='flex gap-4 items-center'>
+                    <div className='relative w-6 h-6'>
+                        <Image
+                            src="/autumn-eight-logo.png"
+                            className='object-cover'
+                            fill
+                            alt="autumn eight logo"
+                        />
+                    </div>
+                    <p className='text-xl font-bold'>Autumn Eight</p>
+                </div>
             </aside>
             {/* MIDDLE */}
             <nav className='absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block'>

@@ -108,7 +108,7 @@ export const Header = () => {
         The Ultimate<br /> Automation Builder
       </h1>
       <p className="max-w-2xl text-base text-justify md:text-xl mt-8 dark:text-neutral-200">
-      Welcome to Autumn 8, your ultimate Automation Builder for Slack, Discord, and Notion messaging! Effortlessly streamline your communication workflows across platforms with Autumn 8. Craft and schedule automated messages with precision and ease, ensuring timely updates and seamless collaboration. Whether you&apos;re managing teams, communities, or projects, Autumn 8 empowers you to automate your messaging needs with unparalleled efficiency and flexibility.
+        Welcome to Autumn 8, your ultimate Automation Builder for Slack, Discord, and Notion messaging! Effortlessly streamline your communication workflows across platforms with Autumn 8. Craft and schedule automated messages with precision and ease, ensuring timely updates and seamless collaboration. Whether you&apos;re managing teams, communities, or projects, Autumn 8 empowers you to automate your messaging needs with unparalleled efficiency and flexibility.
       </p>
     </div>
   );

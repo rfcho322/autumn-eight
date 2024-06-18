@@ -17,7 +17,7 @@ export default function Home() {
         {/* GRADIENT BACKGROUND */}
         <div className="absolute inset-0 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#233_100%)]">
         </div>
-        <div className="flex flex-col mt-[-100px] md:mt-[-50px]"> {/* mt-[-100px]*/}
+        <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
           <ContainerScroll
             titleComponent={
               <div className="flex items-center justify-center flex-col">
@@ -42,8 +42,8 @@ export default function Home() {
             }
           >
             <Image
-              src="/banner-image.png"
-              alt="banner image"
+              src="/screen-image.png"
+              alt="screen image"
               height={720}
               width={1400}
               className="mx-auto rounded-2xl object-cover h-full object-left-top"

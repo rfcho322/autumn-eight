@@ -30,7 +30,7 @@ const DashboardWidget = async (props: Props) => {
                                 <CardTitle>Welcome, {user?.firstName}</CardTitle>
                                 <CardDescription>Automate your message in one-click.</CardDescription>
                             </div>
-                            <Button className='w-fit'>Go to workflows</Button>
+                            <Button className='w-fit text-sm'>Go to workflows</Button>
                         </div>
                         <Image
                             src="/dashboard-image.svg"
@@ -60,8 +60,9 @@ const DashboardWidget = async (props: Props) => {
             </div>
             <Card className='col-span-3 lg:col-span-1'>
                 <div className='flex flex-col justify-between gap-6 p-5 h-full'>
-                    <div className=''>
+                    <div className='flex justify-between items-center'>
                         <CardTitle className='text-card-foreground/80'>Connections</CardTitle>
+                        <Button className='text-sm w-fit'>Setup connections</Button>
                     </div>
                     <div className='flex flex-col gap-6'>
                         {/* TODO CHANGE LOGOS FOR SLACK, NOTION, GOOGLE */}
